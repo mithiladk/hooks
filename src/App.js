@@ -1,22 +1,23 @@
 import logo from './logo.svg';
+import React, { useState } from "react"
 import './App.css';
 
 function App() {
+  const [name ,setName] = useState("Mithila");
+  const changeName = () => {
+    setName("Koustubh");
+  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         Use State Hook Practice
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <div>
+         <p>My Name is : {name}</p>
+         <button onClick = {changeName}> ClickMe </button>
+       </div>
       </header>
     </div>
   );
